@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link rel="shortcut icon" href="images/logo.jpeg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+    <meta
+      name="description"
+      content="Изучите мир CSS-фреймворков с помощью Material Components Web. Создайте адаптивные и стильные веб-страницы с горизонтальным меню, сайдбаром и постраничной навигацией."
+    />
+    <title>CSS Frameworks Guide</title>
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/reboot.css" />
+    <link rel="stylesheet" href="css/parallax.css" />
+    <link rel="stylesheet" href="css/dropdown.css" />
+    <link rel="stylesheet" href="css/socials.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&amp;display=swap&amp;display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap&display=swap"
+    /></noscript>
+    <link rel="stylesheet" href="css/secondary.css" type="text/css" />
+
+    <style>
+      .navbar-fixed-top {
+        top: auto;
+      }
+
+      .navbar.opened {
+        z-index: 1032;
+      }
+
+      @-webkit-keyframes animationHeight {
+        0% {
+          height: 0;
+        }
+        75% {
+          height: 0;
+        }
+        100% {
+          height: 8rem;
+        }
+      }
+      @-moz-keyframes animationHeight {
+        0% {
+          height: 0;
+        }
+        75% {
+          height: 0;
+        }
+        100% {
+          height: 8rem;
+        }
+      }
+      @-o-keyframes animationHeight {
+        0% {
+          height: 0;
+        }
+        75% {
+          height: 0;
+        }
+        100% {
+          height: 8rem;
+        }
+      }
+      @keyframes animationHeight {
+        0% {
+          height: 0;
+        }
+        75% {
+          height: 0;
+        }
+        100% {
+          height: 8rem;
+        }
+      }
+
+      @-webkit-keyframes animationClosing {
+        0% {
+          height: 8rem;
+          opacity: 1;
+        }
+        30% {
+          height: 8rem;
+          opacity: 0.5;
+        }
+        100% {
+          height: 0;
+          opacity: 0;
+        }
+      }
+      @-moz-keyframes animationClosing {
+        0% {
+          height: 8rem;
+          opacity: 1;
+        }
+        30% {
+          height: 8rem;
+          opacity: 0.5;
+        }
+        100% {
+          height: 0;
+          opacity: 0;
+        }
+      }
+      @-o-keyframes animationClosing {
+        0% {
+          height: 8rem;
+          opacity: 1;
+        }
+        30% {
+          height: 8rem;
+          opacity: 0.5;
+        }
+        100% {
+          height: 0;
+          opacity: 0;
+        }
+      }
+      @keyframes animationClosing {
+        0% {
+          height: 8rem;
+          opacity: 1;
+        }
+        30% {
+          height: 8rem;
+          opacity: 0.5;
+        }
+        100% {
+          height: 0;
+          opacity: 0;
+        }
+      }
+
+      @media (max-width: 767px) {
+        @-webkit-keyframes animationHeight {
+          0% {
+            height: 0;
+          }
+          75% {
+            height: 0;
+          }
+          100% {
+            height: 12rem;
+          }
+        }
+        @-moz-keyframes animationHeight {
+          0% {
+            height: 0;
+          }
+          75% {
+            height: 0;
+          }
+          100% {
+            height: 12rem;
+          }
+        }
+        @-o-keyframes animationHeight {
+          0% {
+            height: 0;
+          }
+          75% {
+            height: 0;
+          }
+          100% {
+            height: 12rem;
+          }
+        }
+        @keyframes animationHeight {
+          0% {
+            height: 0;
+          }
+          75% {
+            height: 0;
+          }
+          100% {
+            height: 12rem;
+          }
+        }
+
+        @-webkit-keyframes animationClosing {
+          0% {
+            height: 12rem;
+            opacity: 1;
+          }
+          30% {
+            height: 12rem;
+            opacity: 0.5;
+          }
+          100% {
+            height: 0;
+            opacity: 0;
+          }
+        }
+        @-moz-keyframes animationClosing {
+          0% {
+            height: 12rem;
+            opacity: 1;
+          }
+          30% {
+            height: 12rem;
+            opacity: 0.5;
+          }
+          100% {
+            height: 0;
+            opacity: 0;
+          }
+        }
+        @-o-keyframes animationClosing {
+          0% {
+            height: 12rem;
+            opacity: 1;
+          }
+          30% {
+            height: 12rem;
+            opacity: 0.5;
+          }
+          100% {
+            height: 0;
+            opacity: 0;
+          }
+        }
+        @keyframes animationClosing {
+          0% {
+            height: 12rem;
+            opacity: 1;
+          }
+          30% {
+            height: 12rem;
+            opacity: 0.5;
+          }
+          100% {
+            height: 0;
+            opacity: 0;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="mdc-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+        >
+          <button
+            class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded"
+          >
+            menu</button
+          ><span class="mdc-top-app-bar__title">NavBar</span>
+        </section>
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+        >
+          <button
+            class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded"
+            aria-label="Download"
+          >
+            file_download
+          </button>
+          <button
+            class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded"
+            aria-label="Print this page"
+          >
+            print
+          </button>
+          <button
+            class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded"
+            aria-label="Bookmark this page"
+          >
+            bookmark
+          </button>
+        </section>
+      </div>
+    </header>
+    <section
+      data-bs-version="5.1"
+      class="header18 cid-uq3uRAlTSI mbr-fullscreen"
+      data-bg-video="https://www.youtube.com/embed/ic2pE3KHc3c?autoplay=1&amp;loop=1&amp;playlist=ic2pE3KHc3c&amp;t=20&amp;mute=1&amp;playsinline=1&amp;controls=0&amp;showinfo=0&amp;autohide=1&amp;allowfullscreen=true&amp;mode=transparent"
+      id="hero-15-uq3uRAlTSI"
+    >
+      <div
+        class="mbr-overlay"
+        style="opacity: 0.5; background-color: rgb(0, 0, 0)"
+      ></div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="content-wrap col-12 col-md-12">
+            <h1
+              class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1"
+            >
+              <strong>CSS Фреймворки</strong>
+            </h1>
+
+            <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">
+              Погрузитесь в мир CSS с Material Components Web!
+            </p>
+            <div class="mbr-section-btn">
+              <a class="btn btn-white-outline display-7" href="#"
+                >Узнать больше</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      data-bs-version="5.1"
+      class="features03 cid-uq3uRAl5Gl"
+      id="news-1-uq3uRAl5Gl"
+    >
+      <div class="container-fluid">
+        <div class="row justify-content-center mb-5">
+          <div class="col-12 content-head">
+            <div class="mbr-section-head">
+              <h4
+                class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"
+              >
+                <strong>Последние новости CSS</strong>
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="item features-image col-12 col-md-6 col-lg-3 active">
+            <div class="item-wrapper">
+              <div class="item-img mb-3">
+                <img src="images/newrelease.jpeg" alt="" title="" />
+              </div>
+              <div class="item-content align-left">
+                <h5 class="item-title mbr-fonts-style mt-0 mb-2 display-5">
+                  <strong>Новый релиз Material Components</strong>
+                </h5>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">
+                  02 октября 2024
+                </p>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">
+                  Material Components Web обновился! Теперь с новыми
+                  возможностями и улучшенной производительностью. Узнайте все
+                  детали!
+                </p>
+                <div class="mbr-section-btn item-footer">
+                  <a href="" class="btn item-btn btn-primary display-7"
+                    >Читать</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item features-image col-12 col-md-6 col-lg-3">
+            <div class="item-wrapper">
+              <div class="item-img mb-3">
+                <img
+                  src="images/top5.jpeg"
+                  alt=""
+                  title=""
+                  data-slide-to="1"
+                  data-bs-slide-to="1"
+                />
+              </div>
+              <div class="item-content align-left">
+                <h5 class="item-title mbr-fonts-style mb-2 mt-0 display-5">
+                  <strong>Топ-5 CSS фреймворков 2024</strong>
+                </h5>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">
+                  01 октября 2024
+                </p>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">
+                  Мы собрали лучшие CSS фреймворки этого года. Не упустите шанс
+                  узнать о них!
+                </p>
+                <div class="mbr-section-btn item-footer">
+                  <a href="" class="btn item-btn btn-primary display-7"
+                    >Читать</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item features-image col-12 col-md-6 col-lg-3">
+            <div class="item-wrapper">
+              <div class="item-img mb-3">
+                <img
+                  src="images/choosecss.jpeg"
+                  alt=""
+                  title=""
+                  data-slide-to="2"
+                  data-bs-slide-to="2"
+                />
+              </div>
+              <div class="item-content align-left">
+                <h5 class="item-title mbr-fonts-style mb-2 mt-0 display-5">
+                  <strong>Как выбрать фреймворк?</strong>
+                </h5>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">
+                  30 сентября 2024
+                </p>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">
+                  Выбор фреймворка может быть сложным. Мы расскажем, на что
+                  обратить внимание!
+                </p>
+                <div class="mbr-section-btn item-footer">
+                  <a href="" class="btn item-btn btn-primary display-7"
+                    >Читать</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item features-image col-12 col-md-6 col-lg-3">
+            <div class="item-wrapper">
+              <div class="item-img mb-3">
+                <img
+                  src="images/adaptive.jpeg"
+                  alt=""
+                  title=""
+                  data-slide-to="2"
+                  data-bs-slide-to="2"
+                />
+              </div>
+              <div class="item-content align-left">
+                <h5 class="item-title mbr-fonts-style mb-2 mt-0 display-5">
+                  <strong>Секреты адаптивного дизайна</strong>
+                </h5>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">
+                  29 сентября 2024
+                </p>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">
+                  Адаптивный дизайн — это не магия! Узнайте, как сделать ваш
+                  сайт универсальным.
+                </p>
+                <div class="mbr-section-btn item-footer">
+                  <a href="" class="btn item-btn btn-primary display-7"
+                    >Читать</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      data-bs-version="5.1"
+      class="image02 cid-uq3uRAmKVC mbr-fullscreen mbr-parallax-background"
+      id="image-13-uq3uRAmKVC"
+    >
+      <div class="container">
+        <div class="row"></div>
+      </div>
+    </section>
+
+    <section
+      data-bs-version="5.1"
+      class="gallery07 cid-uq3uRAm4kH"
+      id="gallery-14-uq3uRAm4kH"
+    >
+      <div class="container-fluid gallery-wrapper">
+        <div class="row justify-content-center">
+          <div class="col-12 content-head"></div>
+        </div>
+        <div class="grid-container">
+          <div
+            class="grid-container-3 moving-left"
+            style="transform: translate3d(-200px, 0px, 0px)"
+          >
+            <div class="grid-item">
+              <img src="images/item1.jpeg" />
+            </div>
+            <div class="grid-item">
+              <img src="images/item2.jpeg" alt="" />
+            </div>
+            <div class="grid-item">
+              <img src="images/item3.jpeg" alt="" />
+            </div>
+            <div class="grid-item">
+              <img src="images/item4.jpeg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      data-bs-version="5.1"
+      class="features035 cid-uq3uRAnHrf"
+      id="call-to-action-11-uq3uRAnHrf"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-9 active">
+            <div class="item-wrapper">
+              <div class="card-box">
+                <h4 class="card-text mbr-fonts-style display-7">
+                  Узнайте все о CSS-фреймворках и прокачайте свои навыки!
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 active">
+            <div class="mbr-section-btn">
+              <a class="btn btn-primary display-7" href="#">Начать обучение</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      data-bs-version="5.1"
+      class="header18 cid-uq3uRAnk8w mbr-fullscreen"
+      data-bg-video="https://www.youtube.com/embed/i00OEEaPiGY?autoplay=1&amp;loop=1&amp;playlist=i00OEEaPiGY&amp;t=20&amp;mute=1&amp;playsinline=1&amp;controls=0&amp;showinfo=0&amp;autohide=1&amp;allowfullscreen=true&amp;mode=transparent"
+      id="video-5-uq3uRAnk8w"
+    >
+      <div
+        class="mbr-overlay"
+        style="opacity: 0.3; background-color: rgb(0, 0, 0)"
+      ></div>
+      <div class="container-fluid">
+        <div class="row"></div>
+      </div>
+    </section>
+
+    <section
+      data-bs-version="5.1"
+      class="list1 cid-uq3uRAo3Aj"
+      id="faq-1-uq3uRAo3Aj"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-12 col-lg-10 m-auto">
+            <div class="content">
+              <div class="row justify-content-center mb-5">
+                <div class="col-12 content-head">
+                  <div class="mbr-section-head">
+                    <h4
+                      class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"
+                    >
+                      <strong
+                        >Часто задаваемые вопросы о CSS-фреймворках</strong
+                      >
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <div
+                id="bootstrap-accordion_7"
+                class="panel-group accordionStyles accordion"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                <div class="card">
+                  <div class="card-header" role="tab" id="headingOne">
+                    <a
+                      role="button"
+                      class="panel-title collapsed"
+                      data-toggle="collapse"
+                      data-bs-toggle="collapse"
+                      data-core=""
+                      href="#collapse1_7"
+                      aria-expanded="false"
+                      aria-controls="collapse1"
+                    >
+                      <h6
+                        class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5"
+                      >
+                        Что такое CSS-фреймворки?
+                      </h6>
+                      <span
+                        class="sign mbr-iconfont mobi-mbri-arrow-down"
+                      ></span>
+                    </a>
+                  </div>
+                  <div
+                    id="collapse1_7"
+                    class="panel-collapse noScroll collapse"
+                    role="tabpanel"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordion"
+                    data-bs-parent="#bootstrap-accordion_7"
+                  >
+                    <div class="panel-body">
+                      <p class="mbr-fonts-style panel-text display-7">
+                        CSS-фреймворки — это наборы инструментов, которые
+                        упрощают разработку веб-дизайна, позволяя вам
+                        сосредоточиться на креативе, а не на коде.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" role="tab" id="headingOne">
+                    <a
+                      role="button"
+                      class="panel-title collapsed"
+                      data-toggle="collapse"
+                      data-bs-toggle="collapse"
+                      data-core=""
+                      href="#collapse2_7"
+                      aria-expanded="false"
+                      aria-controls="collapse2"
+                    >
+                      <h6
+                        class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5"
+                      >
+                        Зачем использовать CSS-фреймворки?
+                      </h6>
+                      <span
+                        class="sign mbr-iconfont mobi-mbri-arrow-down"
+                      ></span>
+                    </a>
+                  </div>
+                  <div
+                    id="collapse2_7"
+                    class="panel-collapse noScroll collapse"
+                    role="tabpanel"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordion"
+                    data-bs-parent="#bootstrap-accordion_7"
+                  >
+                    <div class="panel-body">
+                      <p class="mbr-fonts-style panel-text display-7">
+                        Потому что писать код с нуля — это как пытаться собрать
+                        IKEA без инструкции. Зачем мучиться?
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" role="tab" id="headingOne">
+                    <a
+                      role="button"
+                      class="panel-title collapsed"
+                      data-toggle="collapse"
+                      data-bs-toggle="collapse"
+                      data-core=""
+                      href="#collapse3_7"
+                      aria-expanded="false"
+                      aria-controls="collapse3"
+                    >
+                      <h6
+                        class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5"
+                      >
+                        Как выбрать правильный фреймворк?
+                      </h6>
+                      <span
+                        class="sign mbr-iconfont mobi-mbri-arrow-down"
+                      ></span>
+                    </a>
+                  </div>
+                  <div
+                    id="collapse3_7"
+                    class="panel-collapse noScroll collapse"
+                    role="tabpanel"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordion"
+                    data-bs-parent="#bootstrap-accordion_7"
+                  >
+                    <div class="panel-body">
+                      <p class="mbr-fonts-style panel-text display-7">
+                        Сравните их возможности, изучите отзывы и выберите тот,
+                        который не заставит вас плакать.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" role="tab" id="headingOne">
+                    <a
+                      role="button"
+                      class="panel-title collapsed"
+                      data-toggle="collapse"
+                      data-bs-toggle="collapse"
+                      data-core=""
+                      href="#collapse4_7"
+                      aria-expanded="false"
+                      aria-controls="collapse4"
+                    >
+                      <h6
+                        class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5"
+                      >
+                        CSS-фреймворки для новичков?
+                      </h6>
+                      <span
+                        class="sign mbr-iconfont mobi-mbri-arrow-down"
+                      ></span>
+                    </a>
+                  </div>
+                  <div
+                    id="collapse4_7"
+                    class="panel-collapse noScroll collapse"
+                    role="tabpanel"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordion"
+                    data-bs-parent="#bootstrap-accordion_7"
+                  >
+                    <div class="panel-body">
+                      <p class="mbr-fonts-style panel-text display-7">
+                        Bootstrap и Materialize — отличные варианты для старта.
+                        Они как ваши лучшие друзья в мире веб-разработки!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" role="tab" id="headingOne">
+                    <a
+                      role="button"
+                      class="panel-title collapsed"
+                      data-toggle="collapse"
+                      data-bs-toggle="collapse"
+                      data-core=""
+                      href="#collapse5_7"
+                      aria-expanded="false"
+                      aria-controls="collapse5"
+                    >
+                      <h6
+                        class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5"
+                      >
+                        Как сделать сайт адаптивным?
+                      </h6>
+                      <span
+                        class="sign mbr-iconfont mobi-mbri-arrow-down"
+                      ></span>
+                    </a>
+                  </div>
+                  <div
+                    id="collapse5_7"
+                    class="panel-collapse noScroll collapse"
+                    role="tabpanel"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordion"
+                    data-bs-parent="#bootstrap-accordion_7"
+                  >
+                    <div class="panel-body">
+                      <p class="mbr-fonts-style panel-text display-7">
+                        Используйте медиа-запросы и гибкие сетки. Это как магия,
+                        только без волшебной палочки!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      data-bs-version="5.1"
+      class="people06 cid-uq3uRAoHVy"
+      id="testimonials-7-uq3uRAoHVy"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="card col-12 col-md-12 col-lg-8">
+            <div class="card-wrapper">
+              <div class="card-box align-center">
+                <p class="card-text mbr-fonts-style display-5">
+                  Этот сайт изменил моё представление о CSS-фреймворках!
+                </p>
+                <div class="img-wrapper mt-3 justify-content-center">
+                  <img
+                    src="images/person.jpeg"
+                    alt=""
+                    data-slide-to="0"
+                    data-bs-slide-to="0"
+                  />
+                </div>
+                <p class="card-title mbr-fonts-style mt-3 display-7">
+                  <strong>Анна Смирнова</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/VE62mLPMdSwf.js"></script>
+    <script src="js/zJp0ScQWDXJn.js"></script>
+    <script src="js/Yk7V4sPgJZab.js"></script>
+    <script src="js/HRr1ioX41P1A.js"></script>
+    <script src="js/wkEIc5RcDXlE.js"></script>
+    <script src="js/tH4yrwBYibwA.js"></script>
+    <script src="js/MDjiiHaJghdt.js"></script>
+    <script src="js/9skCTA48NHIv.js"></script>
+    <script src="js/oJgakEWRXAmE.js"></script>
+    <script src="js/oQmUDcWzsVQ9.js"></script>
+    <script src="js/ZoQ1sY3I94Tk.js"></script>
+  </body>
+</html>
